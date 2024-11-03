@@ -23,7 +23,7 @@ if __name__ == "__main__":
     parser.add_argument("file", help="The file to output the formatted tune to.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-t", "--tune", help="The list of integers that make the tune, separated by spaces and surrounded by quotes. The first number is tempo, then pairs of numbers for pitch and duration respectively. The tempo is the base for all note durations. 60 gives a 1-second base, 120 gives a half-second base, etc. Pitches are Hz. Set pitch to 0 to produce a rest.")
-    group.add_argument("-i", "--input", help="The text file to use as input, must contain information that is formatted the same way as the \"-t\" or \"--tune\" argument ion GRUB.")
+    group.add_argument("-i", "--input", help="The text file to use as input, must contain information that is formatted the same way as the \"-t\" or \"--tune\" argument in GRUB.")
     args = parser.parse_args()
     if args.tune != None:
         if args.verbose:
